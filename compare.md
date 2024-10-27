@@ -116,3 +116,29 @@ const response = await axios.post('http://localhost:3000/api/rules/create_rule',
 - String values should be enclosed in single quotes
 - The response includes the parsed AST (Abstract Syntax Tree) representation of your rule
 - All created rules are stored with a timestamp and unique ID
+
+Endpoint
+
+```
+POST http://localhost:3000/api/rules/evaluate_rule
+```
+
+Headers
+
+| Header       | Value            | Required |
+| ------------ | ---------------- | -------- |
+| Content-Type | application/json | Yes      |
+
+Request Body
+
+```json
+{
+    "ruleId": "ruleId",
+    "userData": {
+        "age": 35,
+        "department": "Sales",
+        "salary": 60000,
+        "experience": 3
+    }
+}
+```

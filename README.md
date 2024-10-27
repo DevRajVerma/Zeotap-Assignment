@@ -52,19 +52,19 @@ You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
 
 1. **Create Rule**
 
-## Endpoint
+Endpoint
 
 ```
 POST http://localhost:3000/api/rules/create_rule
 ```
 
-## Headers
+Headers
 
 | Header       | Value            | Required |
 | ------------ | ---------------- | -------- |
 | Content-Type | application/json | Yes      |
 
-## Request Body
+Request Body
 
 ```json
 {
@@ -80,18 +80,29 @@ Now to evaluate a user against a rule, you need ruleId of that rule and data of 
 
 https://zeo-ass-1-frontend.vercel.app/ You can find the rules along with their ids here
 
-```http
-POST http://localhost:3000/api/rules/evaluate_rule
-Content-Type: application/json
+Endpoint
 
+```
+POST http://localhost:3000/api/rules/evaluate_rule
+```
+
+Headers
+
+| Header       | Value            | Required |
+| ------------ | ---------------- | -------- |
+| Content-Type | application/json | Yes      |
+
+Request Body
+
+```json
 {
-    "ruleId": "ruleId",
-    "userData": {
-        "age": 35,
-        "department": "Sales",
-        "salary": 60000,
-        "experience": 3
-    }
+  "ruleId": "ruleId",
+  "userData": {
+    "age": 35,
+    "department": "Sales",
+    "salary": 60000,
+    "experience": 3
+  }
 }
 ```
 
