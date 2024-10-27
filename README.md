@@ -106,6 +106,8 @@ Request Body
 }
 ```
 
+Response : You will get whether the user is eligible or not according to the rule
+
 ## Sample Rules
 
 ```
