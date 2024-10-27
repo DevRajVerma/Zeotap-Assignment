@@ -52,14 +52,26 @@ You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
 
 1. **Create Rule**
 
-```http
-POST http://localhost:3000/api/rules/create_rule
-Content-Type: application/json
+## Endpoint
 
+```
+POST http://localhost:3000/api/rules/create_rule
+```
+
+## Headers
+
+| Header       | Value            | Required |
+| ------------ | ---------------- | -------- |
+| Content-Type | application/json | Yes      |
+
+## Request Body
+
+```json
 {
-    "ruleString": "((age > 30 AND department = 'Sales') OR (age < 25))"
+  "ruleString": "((age > 30 AND department = 'Sales') OR (age < 25))"
 }
 ```
+
 Response: You will get the generated AST for this rule along with rule Id
 
 2. **Evaluate Rule**
@@ -98,8 +110,10 @@ AND (salary > 50000 OR experience > 5)
 
 ### Three-Tier Structure
 
-1. **Frontend**: You can find all the created rules with their ruleIds here 
+1. **Frontend**: You can find all the created rules with their ruleIds here
+
 - https://zeo-ass-1-frontend.vercel.app/
+
 2. **Backend API**: Process services for rule operations
 3. **Data Layer**: Persistent storage for rules and metadata
 
