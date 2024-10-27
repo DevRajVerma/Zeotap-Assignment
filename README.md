@@ -65,7 +65,7 @@ Response: You will get the generated AST for this rule along with rule Id
 2. **Evaluate Rule**
 
 ```http
-POST /api/rules/evaluate_rule
+POST http://localhost:3000/api/rules/evaluate_rule
 Content-Type: application/json
 
 {
