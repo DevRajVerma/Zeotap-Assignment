@@ -14,9 +14,39 @@ This application provides a robust system for creating, and evaluating business 
 - **Error Handling**: Comprehensive validation and error reporting
 - **Attribute Validation**: Verify attributes against predefined catalogs
 
+## Setup and Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/DevRajVerma/Zeotap-Assignment.git
+```
+
+2. Install dependencies:
+
+```bash
+cd Zeotap-Assignment/
+npm install
+```
+
+3. Start the application:
+
+```bash
+npm start
+```
+
+## What to do after Server starts running
+
+You can create a new rule by POST /api/rules/create_rule
+
+You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
+
+- These routes are mentioned above in API Endpoints
+
 ## Architecture
 
 ### Three-Tier Structure
+
 1. **Frontend**: I haven't build the frontend yet, just backend
 2. **Backend API**: Process services for rule operations
 3. **Data Layer**: Persistent storage for rules and metadata
@@ -24,16 +54,18 @@ This application provides a robust system for creating, and evaluating business 
 ### Core Components
 
 #### Data Structure
+
 The AST is implemented using a Node structure with:
+
 - `type`: Node type (operator/operand)
 - `left`: Left child reference
 - `right`: Right child reference
 - `value`: Operand value
 
-
 #### API Endpoints
 
 1. **Create Rule**
+
 ```http
 POST http://localhost:3000/api/rules/create_rule
 Content-Type: application/json
@@ -43,8 +75,8 @@ Content-Type: application/json
 }
 ```
 
-
 2. **Evaluate Rule**
+
 ```http
 POST /api/rules/evaluate_rule
 Content-Type: application/json
@@ -64,41 +96,17 @@ Content-Type: application/json
 
 ```
 # Rule 1
-((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) 
+((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing'))
 AND (salary > 50000 OR experience > 5)
 
 # Rule 2
 ((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)
 ```
 
-## Setup and Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/DevRajVerma/Zeotap-Assignment.git
-```
-
-2. Install dependencies:
-```bash
-cd Zeotap-Assignment/
-npm install
-```
-
-3. Start the application:
-```bash
-npm start
-```
-
-## What to do after Server starts running
-You can create a new rule by POST /api/rules/create_rule 
-
-You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
-
-- These routes are mentioned above in API Endpoints
-
 ## Error Handling
 
 The system includes comprehensive error handling for:
+
 - Invalid rule syntax
 - Unknown attributes
 - Type mismatches
