@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 //
 const ruleRoutes = require("./routes/ruleRoutes");
-app.use('/api/', ruleRoutes);
+app.use('/api/rules', ruleRoutes);
 
 
 
