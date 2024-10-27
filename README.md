@@ -48,7 +48,7 @@ You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
 
 #### API Endpoints
 
-Please use Postman to POST to these routes with requested body
+### Please use Postman to POST to these routes with requested body
 
 1. **Create Rule**
 
@@ -63,6 +63,9 @@ Content-Type: application/json
 Response: You will get the generated AST for this rule along with rule Id
 
 2. **Evaluate Rule**
+
+Now to evaluate a user against a rule, you need ruleId of that rule and data of the user you want to evaluate
+So how can you get the user id
 
 ```http
 POST http://localhost:3000/api/rules/evaluate_rule
