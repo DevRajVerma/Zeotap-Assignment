@@ -89,6 +89,12 @@ npm install
 npm start
 ```
 
+## What to do after Server starts running
+You can create a new rule by POST /api/rules/create_rule 
+
+You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
+
+- These routes are mentioned above in API Endpoints
 
 ## Error Handling
 
