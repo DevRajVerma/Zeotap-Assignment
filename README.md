@@ -48,6 +48,8 @@ You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
 
 #### API Endpoints
 
+Please use Postman to POST to these routes with requested body
+
 1. **Create Rule**
 
 ```http
@@ -58,6 +60,7 @@ Content-Type: application/json
     "ruleString": "((age > 30 AND department = 'Sales') OR (age < 25))"
 }
 ```
+Response: You will get the generated AST for this rule along with rule Id
 
 2. **Evaluate Rule**
 

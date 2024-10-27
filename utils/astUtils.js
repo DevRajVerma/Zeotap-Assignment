@@ -18,7 +18,7 @@ function createAST(ruleString) {
 
 // Recursive function to parse the tokens into an AST
 function parseExpression(tokens) {
-  console.log("Parsing expression with tokens:", tokens);
+  // console.log("Parsing expression with tokens:", tokens);
 
   if (tokens.length === 0) {
     throw new Error("Unexpected end of input");

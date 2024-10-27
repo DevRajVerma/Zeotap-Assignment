@@ -28,7 +28,7 @@ exports.createRule = async (req, res) => {
     console.log(ruleString);
     const astRepresentation = createAST(ruleString);
 
-    console.log("After createAST", astRepresentation);
+    console.log("Generated AST for rule: ", astRepresentation);
     const newRule = new Rule({ ruleString, astRepresentation });
     await newRule.save();
     res.status(201).json(newRule);
