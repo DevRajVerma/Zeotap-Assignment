@@ -24,7 +24,7 @@ we have to store AST of ruleString into DB
 }
 }
 
-//rulestring ka sahi ast ban hi nhi raha, store kya land karayega aur evaluate kya land se karega
+
 
 (age > 18 AND salary >= 50000) OR (department = 'Sales')
 String after converting to tokens [
