@@ -126,6 +126,7 @@ AND (salary > 50000 OR experience > 5)
 1. **Frontend**: You can find all the created rules with their ruleIds here
 
 - https://zeo-ass-1-frontend.vercel.app/
+- Note: frontend will work properly only if server is running
 
 2. **Backend API**: Process services for rule operations
 3. **Data Layer**: Persistent storage for rules and metadata
