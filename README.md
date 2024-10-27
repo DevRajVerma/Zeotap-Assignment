@@ -65,7 +65,7 @@ Response: You will get the generated AST for this rule along with rule Id
 2. **Evaluate Rule**
 
 Now to evaluate a user against a rule, you need ruleId of that rule and data of the user you want to evaluate
-So where are the ruleIds?
+
 https://zeo-ass-1-frontend.vercel.app/ You can find the rules along with their ids here
 
 ```http
