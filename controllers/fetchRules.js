@@ -7,7 +7,7 @@ exports.fetchRules = async (req, res) => {
       .sort({ createdAt: -1 }) // Sort by creation date, newest first
       .lean(); // Convert to plain JavaScript objects for better performance
 
-    console.log("Fetched rules:", rules);
+    // console.log("Fetched rules:", rules);
 
     return res.status(200).json({
       success: true,
