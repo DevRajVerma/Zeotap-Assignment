@@ -35,11 +35,11 @@ The AST is implemented using a Node structure with:
 
 1. **Create Rule**
 ```http
-POST /api/rules/create_rule
+POST http://localhost:3000/api/rules/create_rule
 Content-Type: application/json
 
 {
-    "rule_string": "((age > 30 AND department = 'Sales') OR (age < 25))"
+    "ruleString": "((age > 30 AND department = 'Sales') OR (age < 25))"
 }
 ```
 
@@ -50,8 +50,8 @@ POST /api/rules/evaluate_rule
 Content-Type: application/json
 
 {
-    "rule_id": "rule_id",
-    "data": {
+    "ruleId": "ruleId",
+    "userData": {
         "age": 35,
         "department": "Sales",
         "salary": 60000,
