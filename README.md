@@ -22,10 +22,13 @@ This application provides a robust system for creating, and evaluating business 
 git clone https://github.com/DevRajVerma/Zeotap-Assignment.git
 ```
 
+```bash
+cd Zeotap-Assignment/
+```
+
 2. Install dependencies:
 
 ```bash
-cd Zeotap-Assignment/
 npm install
 ```
 
@@ -41,26 +44,7 @@ You can create a new rule by POST /api/rules/create_rule
 
 You can evaluate userdata against a rule by POST /api/rules/evaluate_rule
 
-- These routes are mentioned above in API Endpoints
-
-## Architecture
-
-### Three-Tier Structure
-
-1. **Frontend**: I haven't build the frontend yet, just backend
-2. **Backend API**: Process services for rule operations
-3. **Data Layer**: Persistent storage for rules and metadata
-
-### Core Components
-
-#### Data Structure
-
-The AST is implemented using a Node structure with:
-
-- `type`: Node type (operator/operand)
-- `left`: Left child reference
-- `right`: Right child reference
-- `value`: Operand value
+- Let's see how can we do this
 
 #### API Endpoints
 
@@ -102,6 +86,25 @@ AND (salary > 50000 OR experience > 5)
 # Rule 2
 ((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)
 ```
+
+## Architecture
+
+### Three-Tier Structure
+
+1. **Frontend**: I haven't build the frontend yet, just backend
+2. **Backend API**: Process services for rule operations
+3. **Data Layer**: Persistent storage for rules and metadata
+
+### Core Components
+
+#### Data Structure
+
+The AST is implemented using a Node structure with:
+
+- `type`: Node type (operator/operand)
+- `left`: Left child reference
+- `right`: Right child reference
+- `value`: Operand value
 
 ## Error Handling
 
