@@ -4,14 +4,13 @@ A powerful and flexible 3-tier rule engine application that uses Abstract Syntax
 
 ## Overview
 
-This application provides a robust system for creating, combining, and evaluating business rules using an AST-based approach. It supports dynamic rule creation and modification, making it suitable for various business use cases where complex eligibility criteria need to be evaluated.
+This application provides a robust system for creating, and evaluating business rules using an AST-based approach. It supports dynamic rule creation and modification, making it suitable for various business use cases where complex eligibility criteria need to be evaluated.
 
 ## Features
 
 - **AST-based Rule Processing**: Efficient rule representation using Abstract Syntax Trees
 - **Dynamic Rule Creation**: Create rules from string expressions
 - **Real-time Evaluation**: Evaluate user data against complex rule sets
-- **Flexible Attribute Support**: Handle various data types (numeric, string, etc.)
 - **Error Handling**: Comprehensive validation and error reporting
 - **Attribute Validation**: Verify attributes against predefined catalogs
 
@@ -30,7 +29,7 @@ The AST is implemented using a Node structure with:
 - `left`: Left child reference
 - `right`: Right child reference
 - `value`: Operand value
-- Additional metadata fields
+
 
 #### API Endpoints
 
