@@ -85,53 +85,11 @@ cd Zeotap-Assignment/
 npm install
 ```
 
-3. Set up the database:
+3. Start the application:
 ```bash
-python manage.py migrate
+npm start
 ```
 
-4. Start the application:
-```bash
-python manage.py runserver
-```
-
-## Usage Examples
-
-### Creating a Rule
-```python
-from rule_engine import create_rule
-
-rule_string = "(age > 30 AND department = 'Sales')"
-rule = create_rule(rule_string)
-```
-
-### Combining Rules
-```python
-from rule_engine import combine_rules
-
-combined_rule = combine_rules([rule1, rule2])
-```
-
-### Evaluating Data
-```python
-from rule_engine import evaluate_rule
-
-data = {
-    "age": 35,
-    "department": "Sales",
-    "salary": 60000,
-    "experience": 3
-}
-
-result = evaluate_rule(combined_rule, data)
-```
-
-## Testing
-
-Run the test suite:
-```bash
-python -m pytest tests/
-```
 
 ## Error Handling
 
@@ -141,39 +99,3 @@ The system includes comprehensive error handling for:
 - Type mismatches
 - Missing required data
 - Invalid operator usage
-
-## Performance Considerations
-
-- AST optimization for repeated evaluations
-- Efficient rule combination algorithms
-- Caching of frequently used rules
-- Optimized database queries
-
-## Database Schema
-
-```sql
--- Rules Table
-CREATE TABLE rules (
-    id UUID PRIMARY KEY,
-    name VARCHAR(255),
-    rule_string TEXT,
-    ast_data JSONB,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP
-);
-
--- Rule Combinations Table
-CREATE TABLE rule_combinations (
-    id UUID PRIMARY KEY,
-    name VARCHAR(255),
-    rules JSON,
-    combined_ast JSONB,
-    created_at TIMESTAMP
-);
-```
-
-
-
-
-
-
